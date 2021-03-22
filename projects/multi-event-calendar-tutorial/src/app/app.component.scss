@@ -1,0 +1,46 @@
+/* SPDX-License-Identifier: MIT */
+/* Copyright (c) 2021 Daimler TSS GmbH */
+.page-container {
+  display: flex;
+  flex-flow: column;
+  flex-wrap: nowrap;
+  align-items: center;
+
+  div {
+    display: flex;
+  }
+
+  div > * {
+    margin: 2em;
+  }
+
+  .user-actions {
+    display: block;
+    min-width: 45ch;
+    overflow: hidden;
+
+    p {
+      font-size: 1em;
+    }
+
+    .user-action-list {
+      display: block;
+      min-height: 60vh;
+      max-height: 60vh;
+      margin-left: 3em;
+      margin-top: 0;
+      margin-bottom: 0;
+      overflow: hidden;
+      color: #7f7f7f;
+    }
+
+    .user-action-list > *:first-child {
+      color: black;
+    }
+  }
+
+  .user-action-list > * {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}

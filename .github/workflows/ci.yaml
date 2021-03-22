@@ -1,0 +1,39 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2021 Daimler TSS GmbH
+
+name: ci
+
+on:
+  push:
+    branches:
+      - main
+      - feature/*
+      - fix/*
+    paths-ignore:
+      - '**.md'
+  pull_request:
+    branches:
+      - main
+      - feature/*
+      - fix/*
+      - release/*
+    paths-ignore:
+      - '**.md'
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+          registry-url: https://npm.pkg.github.com/
+          scope: '@daimler'
+      - run: npm install
+      - run: npm run lib-test
+      - run: npm run app-test
+      - run: npm run lib-package
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+

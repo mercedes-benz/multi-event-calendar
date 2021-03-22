@@ -1,0 +1,19 @@
+<!-- SPDX-License-Identifier: MIT -->
+<!-- Copyright (c) 2021 Daimler TSS GmbH -->
+<div class="weekNumbers">
+  <ng-container *ngFor="let weekNumber of weekNumbers">
+    <mecal-cell [data]="weekNumber"></mecal-cell>
+  </ng-container>
+</div>
+<div class="days">
+  <ng-container *ngFor="let weekDay of weekDays">
+    <mecal-cell [data]="weekDay"></mecal-cell>
+  </ng-container>
+  <ng-container *ngFor="let day of days">
+    <mecal-cell
+      [data]="day"
+      (dayCellClicked)="onDayCellClicked(day)"
+      (dayCellFocused)="onDayCellFocused(day)">
+    </mecal-cell>
+  </ng-container>
+</div>

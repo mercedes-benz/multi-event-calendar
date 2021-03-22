@@ -1,0 +1,12 @@
+<!-- SPDX-License-Identifier: MIT -->
+<!-- Copyright (c) 2021 Daimler TSS GmbH -->
+<div class="month-navigation" [ngClass]="{'enabled': isEnabled()}">
+  <div *ngIf="isEnabled()" class="prev-action" (click)="emitPreviousMonthClick()">
+    <i class="arrow-left"></i>
+  </div>
+  {{ monthName }}
+  <div *ngIf="isEnabled()" class="next-action" (click)="emitNextMonthClick()">
+    <i class="arrow-right"></i>
+  </div>
+</div>
+

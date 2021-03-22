@@ -1,0 +1,28 @@
+<!-- SPDX-License-Identifier: MIT -->
+<!-- Copyright (c) 2021 Daimler TSS GmbH -->
+<div class="page-container">
+  <h1>Multi-Event-Calendar-Tutorial</h1>
+  <div>
+    <mecal-calendar
+      [events]="events"
+      [numberOfMonths]="2"
+      [translationLocale]="'en'"
+      (daySelected)="onDaySelected($event)"
+      (eventDaySelected)="onEventDaySelected($event)"
+      (selectedEventDaySelected)="onSelectedEventDaySelected($event)"
+      (monthSelected)="onMonthSelected($event)"
+      (yearSelected)="onYearSelected($event)"
+      (dayFocused)="onDayFocused($event)">
+    </mecal-calendar>
+    <div class="user-actions">
+      <p>Your user actions (ordered desc):</p>
+      <div class="user-action-list">
+        <div *ngFor="let action of userVisibleActions.reverse()">
+          {{ action.action + ' - ' }}
+          {{ action.selectedValue }}
+        </div>
+      </div>
+      <input type="checkbox" [(ngModel)]="includeX">include dayFocused
+    </div>
+  </div>
+</div>

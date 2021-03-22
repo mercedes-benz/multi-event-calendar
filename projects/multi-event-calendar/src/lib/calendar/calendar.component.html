@@ -1,0 +1,29 @@
+<!-- SPDX-License-Identifier: MIT -->
+<!-- Copyright (c) 2021 Daimler TSS GmbH -->
+<ng-container *ngIf="localeInitialized">
+  <mecal-year-navigation
+    [selectedYear]="year"
+    [startYear]="minSelectableYear"
+    [endYear]="maxSelectableYear"
+    (yearChanged)="onYearChanged($event)">
+  </mecal-year-navigation>
+  <ng-container *ngFor="let month of months">
+    <mecal-month-navigation
+      [selectedMonth]="month.month"
+      [allowNavigation]="month.allowNavigation"
+      [locale]="localeId"
+      (previousMonthSelected)="onPreviousMonthSelected()"
+      (nextMonthSelected)="onNextMonthSelected()">
+    </mecal-month-navigation>
+    <mecal-month
+      [year]="month.year"
+      [month]="month.month"
+      [events]="month.events"
+      [locale]="localeId"
+      (daySelected)="onDaySelected($event)"
+      (eventDaySelected)="onEventDaySelected($event)"
+      (selectedEventDaySelected)="onSelectedEventDaySelected($event)"
+      (dayFocused)="onDayFocused($event)">
+    </mecal-month>
+  </ng-container>
+</ng-container>

@@ -1,0 +1,31 @@
+/* SPDX-License-Identifier: MIT */
+/* Copyright (c) 2021 Daimler TSS GmbH */
+/* To learn more about this file see: https://angular.io/config/tsconfig. */
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "paths": {
+      "multi-event-calendar": [
+        "dist/multi-event-calendar/multi-event-calendar",
+        "dist/multi-event-calendar"
+      ]
+    },
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "es2020",
+    "lib": [
+      "es2018",
+      "dom"
+    ]
+  },
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false
+  }
+}

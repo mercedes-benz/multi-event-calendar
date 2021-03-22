@@ -1,22 +1,57 @@
 <!-- SPDX-License-Identifier: MIT -->
-# My Project
+<!-- Copyright (c) 2021 Daimler TSS GmbH -->
+# MultiEventCalendar
 
-## Intended Usage
+You find a lot of different calendars throughout the World Wide Web. But most of them are date pickers/visualizers only, mostly for one or two dates.
 
-⚠️ //TODO// Describe your example! Eg: This project is made for cooking the best Tiramisu. It works best with high quality ingredients and the best tools. Please describe your project as accurately and concisely as possible to help others understand your use case.
+If you search for an angular calendar, which can show multiple events your search ends right here.
 
-## Installation
+|This calendar can be date picker|or| it can show multiple events|
+|---|---|---|
+|![Calendar_Minimum](./docs/assets/calendar_min.png)|->|![Calendar_Minimum](./docs/assets/calendar.png)|
 
-⚠️ //TODO// Add your information and describe how the project can be used.
+___
+
+## Quickstart Guide
+
+This repository contains the [calendar library](./projects/multi-event-calendar) and a [simple demonstration app](./projects/multi-event-calendar-tutorial) as well.  
+
+If you like to see the calendar in action and try its features yourself please use the demonstration app:
+
+1. Clone this repository with a git client of your choice or with command line:
+    ```bash
+    git clone https://github.com/Daimler/multi-event-calendar.git
+    cd multi-event-calendar
+    ```
+
+2. Install all dependencies
+    ```bash
+    npm install
+    ```
+    > Note: via the .npmrc file in this directory github packages is configured as a npm registry. 
+3. Serve the angular application
+    ```bash
+    ng serve
+    ```   
+    > Note: For experimenting with the calendar's behavior have a look at the [input and output description](./projects/multi-event-calendar/README.md#inputs).
+
+If you like to use the calendar in your own angular application please [read.me](./projects/multi-event-calendar/README.md) for further details.
+
+---
+
+## Requirements
+
+- NPM installed
 
 ## Contributing
 
-We welcome any contributions.
-If you want to contribute to this project, please read the [contributing guide](CONTRIBUTING.md).
+We welcome any contributions.  
+If you want to contribute to this project, please read the [contributing guide](CONTRIBUTING.md).  
+To get started with the development, please read the [developing guide](DEVELOPING.md).
 
 ## Code of Conduct
 
-Please read our [Code of Conduct](https://github.com/Daimler/daimler-foss/blob/master/CODE_OF_CONDUCT.md) as it is our base for interaction.
+Please read our [Code of Conduct](CODE_OF_CONDUCT.md) as it is our base for interaction.
 
 ## License
 
