@@ -1,0 +1,9 @@
+/* SPDX-License-Identifier: MIT */
+/* Copyright (c) 2021 Daimler TSS GmbH */
+:host {
+  display: flex;
+  flex-direction: column;
+  min-width: 315px;
+  max-width: 315px;
+  color: #444444;
+}

@@ -1,0 +1,13 @@
+<!-- SPDX-License-Identifier: MIT -->
+<!-- Copyright (c) 2021 Daimler TSS GmbH -->
+<ng-container *ngIf="selectedYear">
+  <mat-form-field class="year-form-field">
+    <mat-select [value]="selectedYear">
+      <ng-container *ngFor="let year of years;">
+        <mat-option class="year-option" [value]="year" (onSelectionChange)="onSelectionChange($event)">
+          {{ year }}
+        </mat-option>
+      </ng-container>
+    </mat-select>
+  </mat-form-field>
+</ng-container>

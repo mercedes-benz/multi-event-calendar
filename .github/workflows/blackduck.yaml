@@ -1,0 +1,28 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2021 Daimler TSS GmbH
+
+name: black duck scan
+
+on:
+  schedule:
+    - cron: '30 7 * * 1'
+
+jobs:
+  blackduck-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+          registry-url: https://npm.pkg.github.com/
+          scope: '@daimler'
+      - run: npm install
+      - run: npm run lib-test
+      - run: npm run app-test
+      - name: blackduck scan
+        uses: blackducksoftware/github-action@2.0.0
+        with:
+          args: '--blackduck.url=${{secrets.BLACKDUCK_URL}} --blackduck.api.token="${{secrets.BLACKDUCK_API_TOKEN}}" --detect.project.name="MECal-MultiEventCalendar"'
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}

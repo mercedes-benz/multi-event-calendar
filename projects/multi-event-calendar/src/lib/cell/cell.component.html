@@ -1,0 +1,18 @@
+<!-- SPDX-License-Identifier: MIT -->
+<!-- Copyright (c) 2021 Daimler TSS GmbH -->
+<div class="cell-container"
+     (click)="onMouseClick()"
+     (mouseenter)="onMouseEnter()">
+  <div class="cell" [ngClass]="{
+    'inactive': isInActive(),
+    'date': isLabelTypeDate(),
+    'weekDay': isLabelTypeWeekDay(),
+    'weekNumber': isLabelTypeWeekNumber(),
+    'currentDay': isHighLiteTypeCurrentDay(),
+    'eventDay': isHighLiteTypeEventDay(),
+    'selected': isHighLiteTypeSelected(),
+    'start': isHighLiteTypeEventStart(),
+    'end': isHighLiteTypeEventEnd()}">
+    {{ data?.label }}
+  </div>
+</div>
