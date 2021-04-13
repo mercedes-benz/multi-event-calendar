@@ -32,7 +32,9 @@ jobs:
           scope: '@daimler'
       - run: npm install
       - run: npm run lib-test
+      - run: npm run lib-lint
       - run: npm run app-test
+      - run: npm run app-lint
       - run: npm run lib-package
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
