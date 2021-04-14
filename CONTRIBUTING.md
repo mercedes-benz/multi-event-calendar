@@ -34,8 +34,9 @@ Please ensure that for all contributions, the corresponding documentation is in-
 Make sure that:
 - You have done your changes in a separate branch. Branches MUST have descriptive names that start with either the `fix/` or `feature/` prefixes. Good examples are: `fix/signin-issue` or `feature/issue-templates`.
 - You have a descriptive commit message with a short title (first line).
-- You have only one commit (if not, squash them into one commit).
-- The project has been built and tested prior to the contribution. `npm test` doesn't throw any error. If it does, fix them first and amend your commit (`git commit --amend`).
+- You have only one commit (if not, squash them into one commit). The commit message contains close #<issue no>.
+- The project has been built and tested prior to the contribution. `npm run lib-test` doesn't throw any error. If it does, fix them first and amend your commit (`git commit --amend`).
+- The static code analysis was performed. `npm run lib-lint` doesn't throw any error. If it does, fix them first and amend your commit (`git commit --amend`).
 
 ## Questions
 For any further questions please have a look into [MAINTAINERS.md](MAINTAINERS.md) and send us a message.
