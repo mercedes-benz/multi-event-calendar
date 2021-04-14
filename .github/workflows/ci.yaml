@@ -19,7 +19,7 @@ on:
       - release/*
     paths-ignore:
       - '**.md'
-
+  
 jobs:
   ci:
     runs-on: ubuntu-latest
@@ -31,11 +31,10 @@ jobs:
           registry-url: https://npm.pkg.github.com/
           scope: '@daimler'
       - run: npm install
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
       - run: npm run lib-test
       - run: npm run lib-lint
       - run: npm run app-test
       - run: npm run app-lint
       - run: npm run lib-package
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
-

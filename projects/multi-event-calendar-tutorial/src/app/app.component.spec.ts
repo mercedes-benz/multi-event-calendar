@@ -2,7 +2,7 @@
 // Copyright (c) 2021 Daimler TSS GmbH
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
-import { MultiEventCalendarModule } from 'multi-event-calendar';
+import { MultiEventCalendarModule } from '@daimler/multi-event-calendar';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
