@@ -35,6 +35,7 @@ jobs:
       - run: npm run lib-lint
       - run: npm run app-test
       - run: npm run app-lint
+      - run: npm run app-e2e
       - run: npm run lib-package
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
