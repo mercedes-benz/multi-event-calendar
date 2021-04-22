@@ -42,7 +42,6 @@ testem.log
 /typings
 
 # package manager files
-package-lock.json
 yarn.lock
 
 # System Files
