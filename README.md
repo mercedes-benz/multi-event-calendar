@@ -10,6 +10,15 @@ If you search for an angular calendar, which can show multiple events your searc
 |---|---|---|
 |![Calendar_Minimum](./docs/assets/calendar_min.png)|->|![Calendar_Minimum](./docs/assets/calendar.png)|
 
+## Prerequisites
+
+- NPM installed
+- Personal access token on Github with at least read:packages permission (see [creating a personal access token](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token))
+- Configured personal Github access token in your local .npmrc config file (see [authenticating with a personal access token](https://docs.github.com/en/packages/guides/configuring-npm-for-use-with-github-packages#authenticating-with-a-personal-access-token))
+  > Note: Otherwise you will get the following error message on npm install:\
+  npm ERR! code E401\
+  npm ERR! Unable to authenticate, need: Basic realm="GitHub Package Registry":
+
 ___
 
 ## Quickstart Guide
@@ -38,10 +47,6 @@ If you like to see the calendar in action and try its features yourself please u
 If you like to use the calendar in your own angular application please [read.me](./projects/multi-event-calendar/README.md) for further details.
 
 ---
-
-## Requirements
-
-- NPM installed
 
 ## Contributing
 

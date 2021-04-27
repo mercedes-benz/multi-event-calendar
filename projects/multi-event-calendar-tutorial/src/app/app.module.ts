@@ -5,7 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MultiEventCalendarModule } from 'multi-event-calendar';
+import { MultiEventCalendarModule } from '@daimler/multi-event-calendar';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({

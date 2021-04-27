@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 // Copyright (c) 2021 Daimler TSS GmbH
 import { Component } from '@angular/core';
-import { CalendarEvent } from 'multi-event-calendar';
+import { CalendarEvent } from '@daimler/multi-event-calendar';
 import { formatDate } from '@angular/common';
 
 interface UserAction {
