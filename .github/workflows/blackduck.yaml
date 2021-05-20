@@ -25,6 +25,6 @@ jobs:
       - name: blackduck scan
         uses: blackducksoftware/github-action@2.0.0
         with:
-          args: '--blackduck.url=${{secrets.BLACKDUCK_URL}} --blackduck.api.token="${{secrets.BLACKDUCK_API_TOKEN}}" --detect.project.name="MECal-MultiEventCalendar"'
+          args: '--blackduck.url=${{secrets.BLACKDUCK_URL}} --blackduck.api.token="${{secrets.BLACKDUCK_API_TOKEN}}" --detect.project.name="MECal-MultiEventCalendar" --detect.npm.include.dev.dependencies=false'
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
