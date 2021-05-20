@@ -7,7 +7,6 @@
 | Maintainer       | Email                           | GitHub ID                                 | Affiliation                                                                                       | Joined     |
 | -----------------| ------------------------------- | ----------------------------------------- | ------------------------------------------------------------------------------------------------- | ---------- | 
 | Oliver Arlt      | <oliver.arlt@daimler.com>       | [arltoli](https://github.com/arltoli)     | Daimler TSS GmbH, [imprint](LEGAL_IMPRINT.md) | 2021-01-01 | 
-| Andreas Rüsseler | <andreas.ruesseler@daimler.com> | [ruessea](https://github.com/ruessea)     | Daimler TSS GmbH, [imprint](LEGAL_IMPRINT.md) | 2021-01-01 |
 | Thomas Rauhut    | <thomas.rauhut@daimler.com>     | [trauhut](https://github.com/trauhut)     | Daimler TSS GmbH, [imprint](LEGAL_IMPRINT.md) | 2021-01-01 |
 
 <!--
